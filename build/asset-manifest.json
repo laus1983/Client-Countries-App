@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fc4a9ff0.chunk.css",
+    "main.js": "/static/js/main.d030e36c.chunk.js",
+    "main.js.map": "/static/js/main.d030e36c.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.893555bb.js",
+    "runtime-main.js.map": "/static/js/runtime-main.893555bb.js.map",
+    "static/js/2.28781b77.chunk.js": "/static/js/2.28781b77.chunk.js",
+    "static/js/2.28781b77.chunk.js.map": "/static/js/2.28781b77.chunk.js.map",
+    "static/js/3.64f810ec.chunk.js": "/static/js/3.64f810ec.chunk.js",
+    "static/js/3.64f810ec.chunk.js.map": "/static/js/3.64f810ec.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.fc4a9ff0.chunk.css.map": "/static/css/main.fc4a9ff0.chunk.css.map",
+    "static/js/2.28781b77.chunk.js.LICENSE.txt": "/static/js/2.28781b77.chunk.js.LICENSE.txt",
+    "static/media/7.5e55ec3f.png": "/static/media/7.5e55ec3f.png",
+    "static/media/dark-mode-1.ba6b0a86.png": "/static/media/dark-mode-1.ba6b0a86.png",
+    "static/media/dark-mode.868fb48f.png": "/static/media/dark-mode.868fb48f.png",
+    "static/media/LandingPage.css": "/static/media/greg-rosenke-1TjORT2dLOw-unsplash.dd3639f4.jpg",
+    "static/media/ActivityCreationForm.css": "/static/media/sunguk-kim-WksmEy5wV1s-unsplash (1).6c54cdce.jpg",
+    "static/media/PageNotFound.css": "/static/media/not-found-background.e6653f7f.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.893555bb.js",
+    "static/js/2.28781b77.chunk.js",
+    "static/css/main.fc4a9ff0.chunk.css",
+    "static/js/main.d030e36c.chunk.js"
+  ]
+}
