@@ -1,0 +1,33 @@
+.switch-language {
+  padding-top: 20px;
+  display: flex;
+  justify-content: last baseline;
+  align-items: center;
+  height: 100%;
+}
+
+.switch-language-label {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: left;
+  padding-right: 10px;
+}
+
+.switch-language-select {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 200;
+  color: white;
+  background-color: rgb(75, 179, 240);
+  border-radius: 5px;
+  border: white solid;
+}
+
+.switch-language-select:hover {
+  background-color: white;
+  color: rgb(75, 179, 240);
+  border: rgb(75, 179, 240) solid;
+  font-weight: 300;
+}
