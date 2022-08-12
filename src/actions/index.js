@@ -44,7 +44,7 @@ export function getCountries() {
   return async function (dispatch) {
     dispatch(loading());
     try {
-      const { data } = await axios.get("http://localhost:3001/countries");
+      const { data } = await axios.get("https://countries-api-deploy.herokuapp.com/countries");
       dispatch({
         type: GET_COUNTRIES,
         payload: data,
@@ -62,7 +62,7 @@ export function getByName(name, language) {
       const nameToSearch = language ? removeAccents(name) : name.toLowerCase();
       const languageString = language.toString();
       const { data } = await axios.get(
-        `http://localhost:3001/countries?name=${nameToSearch}&language=${languageString}`
+        `https://countries-api-deploy.herokuapp.com/countries?name=${nameToSearch}&language=${languageString}`
       );
       dispatch({
         type: GET_COUNTRIES_BY_NAME,
@@ -78,7 +78,7 @@ export function getById(id) {
   return async function (dispatch) {
     dispatch(loading());
     try {
-      const { data } = await axios.get(`http://localhost:3001/countries/${id}`);
+      const { data } = await axios.get(`https://countries-api-deploy.herokuapp.com/countries/${id}`);
       dispatch({
         type: GET_COUNTRY_BY_ID,
         payload: data,
@@ -92,7 +92,7 @@ export function getById(id) {
 export function getCountriesNames() {
   return async function (dispatch) {
     try {
-      const { data } = await axios.get("http://localhost:3001/countries");
+      const { data } = await axios.get("https://countries-api-deploy.herokuapp.com/countries");
       dispatch({
         type: GET_COUNTRIES_NAMES,
         payload: data,
@@ -135,7 +135,7 @@ export function postActivities(activities) {
   return async function (dispatch) {
     try {
       const { data } = await axios.post(
-        "http://localhost:3001/activities",
+        "https://countries-api-deploy.herokuapp.com/activities",
         activities
       );
       dispatch({
@@ -151,7 +151,7 @@ export function postActivities(activities) {
 export function getActivities() {
   return async function (dispatch) {
     try {
-      const { data } = await axios.get("http://localhost:3001/activities");
+      const { data } = await axios.get("https://countries-api-deploy.herokuapp.com/activities");
       return dispatch({
         type: GET_ACTIVITIES,
         payload: data,
