@@ -19,13 +19,17 @@
 .title-landing {
     color: white;
     font-size: 1em;
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: baseline;
     width: 100%;
 };
+
+.title-landing-h1{
+    color: white;
+}
 
 .linkTo {
     text-align: center;
