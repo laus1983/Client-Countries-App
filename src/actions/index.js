@@ -46,7 +46,9 @@ export function getCountries() {
   return async function (dispatch) {
     dispatch(loading());
     try {
-      const { data } = await axios.get("https://countries-api-deploy.herokuapp.com/countries");
+      const { data } = await axios.get(
+        "https://countries.luisurdaneta.com/countries"
+      );
       dispatch({
         type: GET_COUNTRIES,
         payload: data,
@@ -64,14 +66,13 @@ export function getByName(name, language) {
       const nameToSearch = language ? removeAccents(name) : name.toLowerCase();
       const languageString = language.toString();
       const { data } = await axios.get(
-        `https://countries-api-deploy.herokuapp.com/countries?name=${nameToSearch}&language=${languageString}`
+        `https://countries.luisurdaneta.com/countries?name=${nameToSearch}&language=${languageString}`
       );
       dispatch({
         type: GET_COUNTRIES_BY_NAME,
         payload: data,
       });
-    } catch (error) {
-    }
+    } catch (error) {}
   };
 }
 
@@ -79,7 +80,9 @@ export function getById(id) {
   return async function (dispatch) {
     dispatch(loading());
     try {
-      const { data } = await axios.get(`https://countries-api-deploy.herokuapp.com/countries/${id}`);
+      const { data } = await axios.get(
+        `https://countries.luisurdaneta.com/countries/${id}`
+      );
       dispatch({
         type: GET_COUNTRY_BY_ID,
         payload: data,
@@ -93,7 +96,9 @@ export function getById(id) {
 export function getCountriesNames() {
   return async function (dispatch) {
     try {
-      const { data } = await axios.get("https://countries-api-deploy.herokuapp.com/countries");
+      const { data } = await axios.get(
+        "https://countries.luisurdaneta.com/countries"
+      );
       dispatch({
         type: GET_COUNTRIES_NAMES,
         payload: data,
@@ -139,7 +144,7 @@ export function postActivities(activities, language) {
       console.log(language);
       console.log(typeof language);
       const { data } = await axios.post(
-        `https://countries-api-deploy.herokuapp.com/activities/create?language=${language}`,
+        `https://countries.luisurdaneta.com/countries/activities/create?language=${language}`,
         activities
       );
       dispatch({
@@ -155,7 +160,9 @@ export function postActivities(activities, language) {
 export function getActivities() {
   return async function (dispatch) {
     try {
-      const { data } = await axios.get("https://countries-api-deploy.herokuapp.com/activities");
+      const { data } = await axios.get(
+        "https://countries.luisurdaneta.com/countries/activities"
+      );
       return dispatch({
         type: GET_ACTIVITIES,
         payload: data,
@@ -170,7 +177,7 @@ export function deleteActivity(id) {
   return async function (dispatch) {
     try {
       const { data } = await axios.delete(
-        `https://countries-api-deploy.herokuapp.com/activities/${id}`,
+        `https://countries.luisurdaneta.com/countries/activities/${id}`
       );
       dispatch({
         type: DELETE_ACTIVITY,
@@ -179,14 +186,14 @@ export function deleteActivity(id) {
     } catch (err) {
       console.log(err);
     }
-  }
+  };
 }
 
 export function putActivity(input, inputValue, language) {
   return async function (dispatch) {
     try {
       const { data } = await axios.put(
-        `https://countries-api-deploy.herokuapp.com/activities/update/${input}?language=${language}`,
+        `https://countries.luisurdaneta.com/countries/activities/update/${input}?language=${language}`,
         inputValue
       );
       dispatch({
@@ -196,5 +203,5 @@ export function putActivity(input, inputValue, language) {
     } catch (err) {
       console.log(err);
     }
-  }
+  };
 }
